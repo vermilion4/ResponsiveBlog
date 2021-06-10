@@ -8,20 +8,13 @@
     grid-gap: 30px;
 }
 
-.box{
-
-    border-top-color: hsl(180, 62%, 55%);
-}
-
 .header{
-    width: 375px;
+    width: 100%;
     margin: auto;
     grid-area: hd;
     display: flex;
     flex-direction: row;
     background-color: teal;
-    padding: 20px;
-    border-top-left-radius: 75%;
 }
 #sub{
     flex: 20%;
@@ -39,9 +32,9 @@
 }
 
 .card{
-    width: 375px;
+    width: 300px;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid hsl(0, 0%, 98%);
     box-shadow: 2px 2px 10px rgb(202 202 202);
     border-top-width: 10px;
@@ -50,7 +43,7 @@
 
 .footer{
     grid-area: ft;
-    width: 375px;
+    width: 100%;
     margin: auto;
     background-color: teal;
     color: white;
@@ -106,9 +99,6 @@
         width: 100%;
         margin: auto;
         padding: 40px;
-    }
-    .header{
-        border-radius: 0;
     }
 }
 
