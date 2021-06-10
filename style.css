@@ -1,18 +1,22 @@
-
 .overallContainer{
     display: grid;
-    width: 100vw;
+    width: 375px;
     margin: auto;
-    grid-template-columns: 400px ;
-    grid-auto-rows:minmax(50px, auto);
     grid-template-areas: "hd"
                         "main"
                         "ft";
-    justify-content: center;
+    grid-gap: 10px;
 }
 
 .box{
-    border: 1px solid red;
+
+    border-top-color: hsl(180, 62%, 55%);
+}
+.card{
+    border: 1px solid hsl(0, 0%, 98%);
+    box-shadow: 2px 2px 10px rgb(202 202 202);
+    border-top-width: 10px;
+    border-top-color: hsl(180, 62%, 55%);
 }
 
 .header{
@@ -36,7 +40,6 @@
 }
 .main{
     grid-area: main;
-    background-color: #17a2b8;
     opacity: 0.7;
 }
 
@@ -54,20 +57,23 @@
 
 .postsContainer{
     display: grid;
-    width: 100vw;
+    width: 375px;
     margin: auto;
     grid-template-columns: 400px ;
     grid-auto-rows:minmax(50px, auto);
     grid-gap: 5px;
 }
+.post{
+    width: 375px;
+}
 
 
-@media (min-width: 600px){
+@media (min-width: 1440px){
     .overallContainer{
         display: grid;
-        width: 100vw;
+        width: 100%;
         margin: auto;
-        grid-template-columns: 400px ;
+        grid-template-columns: 50% 50% ;
         grid-auto-rows:minmax(50px, auto);
         grid-template-areas: "hd hd hd hd hd hd hd hd"
                         "main main main main main main main main"
@@ -75,11 +81,14 @@
     }
     .postsContainer{
         display: grid;
-        width: 100vw;
+        width: 100%;
         margin: auto;
         grid-template-columns: repeat(2, 1fr) ;
         grid-auto-rows:minmax(50px, auto);
         grid-gap: 10px;
+    }
+    .post{
+        width: 100%;
     }
     #sub{
         flex: 45%;
