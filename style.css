@@ -5,47 +5,60 @@
     grid-template-areas: "hd"
                         "main"
                         "ft";
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 .box{
 
     border-top-color: hsl(180, 62%, 55%);
 }
+
+.header{
+    width: 375px;
+    margin: auto;
+    grid-area: hd;
+    display: flex;
+    flex-direction: row;
+    background-color: teal;
+    padding: 20px;
+    border-top-left-radius: 75%;
+}
+#sub{
+    flex: 20%;
+    padding: 45px;
+    margin: auto;
+    color: white;
+}
+#title{
+    flex: 80%;
+    margin: auto;
+    color: white;
+}
+.main{
+    grid-area: main;
+}
+
 .card{
+    width: 375px;
+    margin: auto;
+    padding: 20px;
     border: 1px solid hsl(0, 0%, 98%);
     box-shadow: 2px 2px 10px rgb(202 202 202);
     border-top-width: 10px;
     border-top-color: hsl(180, 62%, 55%);
 }
 
-.header{
-    grid-area: hd;
-    height: 150px;
-    display: flex;
-    flex-direction: row;
-    background-color: teal;
-}
-#sub{
-    flex: 30%;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
-    padding-left: 3vh;
-    color: white;
-}
-#title{
-    flex: 70%;
-    padding-top: 5vh;
-    color: white;
-}
-.main{
-    grid-area: main;
-    opacity: 0.7;
-}
-
 .footer{
     grid-area: ft;
-
+    width: 375px;
+    margin: auto;
+    background-color: teal;
+    color: white;
+    padding: 20px;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
 }
 .footerIcons{
     display: flex;
@@ -57,15 +70,9 @@
 
 .postsContainer{
     display: grid;
-    width: 375px;
-    margin: auto;
-    grid-template-columns: 400px ;
-    grid-auto-rows:minmax(50px, auto);
-    grid-gap: 5px;
+    grid-gap: 30px;
 }
-.post{
-    width: 375px;
-}
+
 
 
 @media (min-width: 1440px){
@@ -73,8 +80,6 @@
         display: grid;
         width: 100%;
         margin: auto;
-        grid-template-columns: 50% 50% ;
-        grid-auto-rows:minmax(50px, auto);
         grid-template-areas: "hd hd hd hd hd hd hd hd"
                         "main main main main main main main main"
                         "ft ft ft ft ft ft ft ft";
@@ -83,26 +88,27 @@
         display: grid;
         width: 100%;
         margin: auto;
-        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-columns: repeat(2, 50%) ;
         grid-auto-rows:minmax(50px, auto);
         grid-gap: 10px;
     }
-    .post{
+    .card{
         width: 100%;
+        padding: 50px;
     }
     #sub{
         flex: 45%;
-        padding: 7vh;
     }
     #title{
         flex: 55%;
     }
+    .header, .footer{
+        width: 100%;
+        margin: auto;
+        padding: 40px;
+    }
+    .header{
+        border-radius: 0;
+    }
 }
-.footer{
-    background-color: teal;
-    color: white;
-}
-.footer a{
-    color: white;
-    text-decoration: none;
-}
+
